@@ -1,0 +1,418 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* Custom variables mapping Stripe/Linear dark themes */
+  --color-background-dark: #030303;
+  --color-card-dark: #0a0a0c;
+  --color-border-dark: rgba(255, 255, 255, 0.08);
+  
+  --color-brand-indigo: #4f46e5;
+  --color-brand-cyan: #06b6d4;
+}
+
+:root {
+  /* Dynamic CSS variable fallback mapping */
+  --accent-primary: #4f46e5;
+  --accent-secondary: #06b6d4;
+  
+  background-color: #030303;
+  color: #f5f5f7;
+}
+
+/* Base custom resets & improvements */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background-dark);
+  color: #f5f5f7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Lenis Smooth Scroll Core Rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  scroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Glassmorphism Premium Utility Framework */
+.glass-panel {
+  background: rgba(10, 10, 12, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Pulse Glow & Spotlight Highlights */
+@keyframes neonPulse {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px var(--accent-secondary)) drop-shadow(0 0 8px var(--accent-secondary));
+  }
+  50% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 1px var(--accent-secondary)) drop-shadow(0 0 3px var(--accent-secondary));
+  }
+}
+
+.neon-glow-cyan {
+  animation: neonPulse 2s infinite ease-in-out;
+}
+
+/* Hide spin-buttons on estimators */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Layout Utilities */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #030303;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* ==========================================
+   GLOBAL LIGHT MODE STYLING AND OVERRIDES
+   ========================================== */
+html.light,
+html.light body,
+html.light section,
+html.light footer,
+html.light main,
+html.light header,
+html.light nav {
+  background-color: #fafafc !important;
+  color: #111115 !important;
+}
+
+html.light .bg-background-dark {
+  background-color: #fafafc !important;
+  color: #111115 !important;
+}
+
+html.light .text-white {
+  color: #111115 !important;
+}
+
+html.light .text-neutral-300,
+html.light .text-neutral-400,
+html.light .text-neutral-500,
+html.light p,
+html.light span:not(.text-brand-cyan):not(.text-brand-indigo) {
+  color: #2e2e38 !important;
+}
+
+/* Force all dark-themed cards, forms, grid boxes, and transparent-white overlays to turn solid white with high-contrast text and shadows */
+html.light .bg-card-dark,
+html.light .glass-card,
+html.light form,
+html.light .bg-white\/\[0\.01\],
+html.light .bg-white\/\[0\.02\],
+html.light .bg-white\/\[0\.03\],
+html.light .bg-white\/\[0\.05\],
+html.light .bg-white\/5,
+html.light .bg-white\/10,
+html.light .bg-white\/15,
+html.light .bg-white\/20,
+html.light .bg-zinc-900,
+html.light .bg-zinc-950,
+html.light .bg-neutral-800,
+html.light .bg-neutral-900,
+html.light .bg-neutral-950,
+html.light .bg-\[\#0a0a0c\],
+html.light .bg-\[\#0c0c0e\],
+html.light .bg-\[\#0f0f12\],
+html.light .bg-\[\#0d0d11\],
+html.light .bg-\[\#121214\],
+html.light .bg-\[\#0b0b0d\],
+html.light .bg-\[\#0d0d10\],
+html.light .bg-\[\#060608\],
+html.light .bg-\[\#131316\],
+html.light [class*="from-card-dark"],
+html.light [class*="to-\[\#050507\]"],
+html.light [class*="from-[#050507]"],
+html.light [class*="from-[#040406]"],
+html.light [class*="from-black"],
+html.light [class*="to-black"] {
+  background-image: none !important;
+  background-color: #ffffff !important;
+  color: #111115 !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Absolute nested text contrast overrides within cards, forms, and calculators */
+html.light .bg-card-dark h3,
+html.light .bg-card-dark h4,
+html.light .bg-card-dark h5,
+html.light .bg-card-dark h6,
+html.light .bg-card-dark p,
+html.light .bg-card-dark span,
+html.light .bg-card-dark label,
+html.light form h3,
+html.light form p,
+html.light form label,
+html.light form span,
+html.light .bg-\[\#0a0a0c\] h3,
+html.light .bg-\[\#0a0a0c\] h4,
+html.light .bg-\[\#0a0a0c\] p,
+html.light .bg-\[\#0a0a0c\] span,
+html.light .bg-\[\#0a0a0c\] label,
+html.light .bg-\[\#0d0d11\] h3,
+html.light .bg-\[\#0d0d11\] h4,
+html.light .bg-\[\#0d0d11\] p,
+html.light .bg-\[\#0d0d11\] span,
+html.light .bg-\[\#131316\] h3,
+html.light .bg-\[\#131316\] h4,
+html.light .bg-\[\#131316\] p,
+html.light .bg-\[\#131316\] span {
+  color: #111115 !important;
+}
+
+html.light .border-white\/5,
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .bg-\[\#030303\],
+html.light .bg-\[\#040406\],
+html.light .bg-black,
+html.light .bg-black\/95,
+html.light .bg-black\/90,
+html.light .bg-black\/85,
+html.light .bg-\[\#050507\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-black\/85.backdrop-blur-xl {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+html.light .metric-reveal-card {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+}
+
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #111115 !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus {
+  border-color: var(--accent-primary) !important;
+  background-color: #ffffff !important;
+}
+
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #111115 !important;
+}
+
+html.light .custom-scrollbar::-webkit-scrollbar-track {
+  background: #f0f0f3;
+}
+html.light .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+html.light .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  color: #111115 !important;
+  background-image: none !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Specific component overlays */
+html.light .fixed.inset-x-0.top-\[60px\].z-35 {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Specialized Chatbot Overrides for Light Mode */
+html.light .fixed.bottom-6.right-6.z-50 > div {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Chat thread background */
+html.light .fixed.bottom-6.right-6.z-50 .bg-black\/95 {
+  background-color: #f3f4f6 !important;
+}
+
+/* Bot bubbles: solid white with dark slate text */
+html.light .fixed.bottom-6.right-6.z-50 .bg-neutral-900 {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* User bubbles: soft blue/indigo with dark indigo text */
+html.light .fixed.bottom-6.right-6.z-50 .bg-brand-indigo\/10 {
+  background-color: #ebf0ff !important;
+  color: #312e81 !important;
+  border-color: rgba(79, 70, 229, 0.15) !important;
+}
+
+/* Footer quick-prompts container */
+html.light .fixed.bottom-6.right-6.z-50 .bg-black\/40 {
+  background-color: #fafafc !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Footer action row */
+html.light .fixed.bottom-6.right-6.z-50 .bg-black\/60 {
+  background-color: #fafafc !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Footer text input container */
+html.light .fixed.bottom-6.right-6.z-50 .bg-black\/90 {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Chat input field */
+html.light .fixed.bottom-6.right-6.z-50 input {
+  background-color: #f3f4f6 !important;
+  color: #111115 !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ========================================================
+   CUSTOM RESPONSIVE FOOTER GRID & LEFT ALIGNMENT QUERY
+   ======================================================== */
+.footer-grid-responsive {
+  display: grid;
+  grid-template-columns: 1fr; /* Default 1 column */
+}
+
+/* Screens below 500px: 1 column, strictly left-aligned text */
+@media (max-width: 500px) {
+  .footer-grid-responsive {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-grid-responsive > div {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  .footer-grid-responsive p,
+  .footer-grid-responsive span,
+  .footer-grid-responsive a,
+  .footer-grid-responsive div,
+  .footer-grid-responsive h4 {
+    text-align: left !important;
+  }
+}
+
+/* Small screens between 500px and 700px: 2 columns, strictly left-aligned text */
+@media (min-width: 501px) and (max-width: 700px) {
+  .footer-grid-responsive {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  /* Brand column and support center column span the full 2 columns for balance */
+  .footer-grid-responsive > div:first-child,
+  .footer-grid-responsive > div:last-child {
+    grid-column: span 2 !important;
+  }
+  .footer-grid-responsive > div {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  .footer-grid-responsive p,
+  .footer-grid-responsive span,
+  .footer-grid-responsive a,
+  .footer-grid-responsive div,
+  .footer-grid-responsive h4 {
+    text-align: left !important;
+  }
+}
+
+/* Desktop screen (above 700px): standard 12-column template spans */
+@media (min-width: 701px) {
+  .footer-grid-responsive {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+  .footer-grid-responsive > div:nth-child(1) { grid-column: span 4 !important; }
+  .footer-grid-responsive > div:nth-child(2) { grid-column: span 3 !important; }
+  .footer-grid-responsive > div:nth-child(3) { grid-column: span 2 !important; }
+  .footer-grid-responsive > div:nth-child(4) { grid-column: span 3 !important; }
+}
+
+/* ========================================================
+   MAP REGIONAL BEACON BADGES LIGHT CONTRAST STYLING
+   ======================================================== */
+.map-node-zip-badge {
+  color: #a3a3a3 !important; /* Neutral telemetry grey in dark mode */
+}
+
+html.light .map-node-zip-badge {
+  background-color: #ffffff !important;
+  color: #111115 !important; /* Rich slate dark color in light mode */
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
