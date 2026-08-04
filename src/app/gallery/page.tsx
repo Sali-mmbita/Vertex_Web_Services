@@ -34,23 +34,23 @@ export default function GalleryPage() {
   const getImage = (val: string) => {
     switch (val) {
       case '/images/gallery/leak-before.jpg':
-        return 'https://images.unsplash.com/photo-1542013936693-8848e574047e?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
       case '/images/gallery/leak-after.jpg':
-        return 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
       case '/images/gallery/sewer-before.jpg':
-        return 'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
       case '/images/gallery/sewer-after.jpg':
-        return 'https://images.unsplash.com/photo-1542013936693-8848e574047e?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
       case '/images/gallery/tank-before.jpg':
-        return 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
       case '/images/gallery/tank-after.jpg':
-        return 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
       case '/images/gallery/backflow-before.jpg':
-        return 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
       case '/images/gallery/backflow-after.jpg':
-        return 'https://images.unsplash.com/photo-1542013936693-8848e574047e?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
       default:
-        return 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80';
+        return 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
     }
   };
 

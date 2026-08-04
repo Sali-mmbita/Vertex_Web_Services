@@ -88,8 +88,8 @@ export default function Home() {
   const homeData = clientConfig.pageContent.home;
 
   // Unsplash CDN plumbing placeholders
-  const pipeLeakImage = 'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1200&q=80';
-  const pipeCleanImage = 'https://images.unsplash.com/photo-1542013936693-8848e574047e?auto=format&fit=crop&w=1200&q=80';
+  const pipeLeakImage = 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
+  const pipeCleanImage = 'https://i.pinimg.com/736x/03/bb/ec/03bbec6dbf085d116512f900b1e9df1f.jpg';
 
   return (
     <div ref={heroRef} className="min-h-screen bg-background-dark text-white flex flex-col relative overflow-x-clip">

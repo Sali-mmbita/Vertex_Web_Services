@@ -3,11 +3,11 @@ import { ClientConfig } from '@/types/config';
 // Default static fallback configuration (used during SSG build compile)
 const defaultStaticConfig: ClientConfig = {
   "meta": {
-    "name": "Elide Plumbing",
-    "phone": "+254 717 631737",
-    "phoneRaw": "+18005553569",
-    "emergencyPhone": "+254 717 631737",
-    "emergencyPhoneRaw": "+18009113569",
+    "name": "Bonvrnture",
+    "phone": "0790 967718",
+    "phoneRaw": "+254 790 967718",
+    "emergencyPhone": "0790 967718",
+    "emergencyPhoneRaw": "+254 790 967718",
     "email": "message@domainname.com",
     "address": {
       "street": "00100-Nairobi-Kenya",
@@ -42,8 +42,8 @@ const defaultStaticConfig: ClientConfig = {
     },
     "logo": {
       "icon": "Activity",
-      "primaryText": "ELIDE",
-      "secondaryText": "PLUMBING"
+      "primaryText": "BONVENTURE",
+      "secondaryText": "PLUMBER"
     }
   },
   "theme": {
@@ -61,10 +61,10 @@ const defaultStaticConfig: ClientConfig = {
       "title": "24/7 Rapid Emergency Response",
       "icon": "Flame",
       "category": "emergency",
-      "shortDesc": "Burst pipes, active flooding, or catastrophic sewage backflows. Dispatched within 10 minutes.",
-      "longDesc": "When a plumbing disaster strikes, every second of delay translates directly into property damage. Vortex Flow maintains a dedicated, fully staged fleet of rapid-response technicians operating 24 hours a day, 365 days a year. Our certified emergency plumbers arrive with advanced truck-mounted water extraction gear, heavy-duty pipe-clamping tools, and high-capacity pumps to instantly stabilize your home or business.",
-      "basePrice": 250,
-      "priceRange": "$250 - $650+",
+      "shortDesc": "The description here",
+      "longDesc": "The Description gooes here",
+      "basePrice": 3000,
+      "priceRange": "Ksh.2500 - Ksh.6500",
       "benefits": [
         "Guaranteed arrival within 45 minutes or diagnostic fee is waived",
         "Advanced hydrostatic stabilization to halt active water damage instantly",
@@ -111,13 +111,13 @@ const defaultStaticConfig: ClientConfig = {
     },
     {
       "slug": "leak-detection",
-      "title": "Acoustic Ultrasonic Leak Detection",
+      "title": "Leak Detection",
       "icon": "Search",
       "category": "residential",
       "shortDesc": "Non-destructive thermal and acoustic scanning to pinpoint hidden slab and wall leaks.",
       "longDesc": "Hidden water leaks behind drywall or underneath concrete foundation slabs can silently rot your home framework. Vortex Flow utilizes non-invasive diagnostic techniques, including micro-acoustic vibration sensors, high-resolution thermal imaging cameras, and tracer gas analysis to pinpoint the exact centimeter of pipe failure without tearing down your walls.",
       "basePrice": 180,
-      "priceRange": "$180 - $400",
+      "priceRange": "min price - max price ",
       "benefits": [
         "100% non-destructive diagnostic methods preserving drywall and flooring",
         "State-of-the-art FLIR thermal mapping and acoustic sensor equipment",
@@ -164,13 +164,13 @@ const defaultStaticConfig: ClientConfig = {
     },
     {
       "slug": "drain-cleaning",
-      "title": "Hydro-Jetting & Drain Descaling",
+      "title": "Gasfitting",
       "icon": "Wind",
       "category": "residential",
       "shortDesc": "High-pressure water jet scouring at 4000 PSI to restore pipelines to pristine internal condition.",
       "longDesc": "Chemical drain cleaners corrode pipes and only burn small holes through blockages. Vortex Flow uses hydro-jetting, sending high-pressure water streams scoured at up to 4,000 PSI through heavy-duty industrial hoses. This clears hair, solid fats, mineral scaling, and tree roots, polishing the internal pipe walls to a brand-new slick state.",
-      "basePrice": 150,
-      "priceRange": "$150 - $450",
+      "basePrice": 10000,
+      "priceRange": "min price - max price",
       "benefits": [
         "Total pipe clearing back to original structural inner diameter",
         "Completely chemical-free, keeping municipal water systems safe",
@@ -217,13 +217,13 @@ const defaultStaticConfig: ClientConfig = {
     },
     {
       "slug": "water-heaters",
-      "title": "Smart Tankless Water Heaters",
+      "title": "MAchanical and Fire services",
       "icon": "Zap",
       "category": "residential",
       "shortDesc": "Ultra-efficient, space-saving tankless water heaters delivering endless hot water on demand.",
       "longDesc": "Traditional water heaters constantly burn energy to keep 50 gallons of water hot in an idle tank. Vortex Flow specializes in installing premium, smart tankless water heaters that instantly flash-heat water only when you turn on a tap. These systems save up to 40% in energy costs, fit compactly on any wall, and provide an endless supply of hot water.",
-      "basePrice": 450,
-      "priceRange": "$450 - $3200",
+      "basePrice": 15000,
+      "priceRange": "min price - max price",
       "benefits": [
         "Never run out of hot water, regardless of consecutive appliance runs",
         "Up to 40% reduction in utility bills through smart thermal modulation",
@@ -275,8 +275,8 @@ const defaultStaticConfig: ClientConfig = {
       "category": "residential",
       "shortDesc": "Rebuild damaged underground pipelines from the inside out using structural epoxy sleeve lining.",
       "longDesc": "Historically, fixing a broken sewer pipe meant trenching through your driveway, lawn, and landscaping. Vortex Flow offers trenchless Cured-In-Place Pipe (CIPP) restoration. We insert a flexible, epoxy-saturated structural sleeve into your existing pipeline through a single entry point, inflate it, and cure it into a bulletproof, joint-free structural pipe with a 50-year warranty.",
-      "basePrice": 1200,
-      "priceRange": "$1200 - $6500",
+      "basePrice": 12000,
+      "priceRange": "min price - max price",
       "benefits": [
         "Preserves mature landscaping, manicured lawns, and paved driveways",
         "Saves thousands in secondary concrete restoration costs",
@@ -328,8 +328,8 @@ const defaultStaticConfig: ClientConfig = {
       "category": "commercial",
       "shortDesc": "Engineered commercial plumbing, annual backflow testing, and heavy-duty grease trap management.",
       "longDesc": "Commercial buildings require specialized hydraulic engineering. Vortex Flow designs, installs, and maintains massive plumbing frameworks, including multi-story drain stacks, commercial booster pumps, industrial water heating grids, certified backflow prevention systems, and high-capacity grease trap interceptors to keep your enterprise in compliance with municipal building codes.",
-      "basePrice": 300,
-      "priceRange": "$300 - $5000+",
+      "basePrice": 12000,
+      "priceRange": "min price - max price",
       "benefits": [
         "Certified backflow testing, certified state reporting, and automated reminders",
         "Staged off-hours execution to minimize or prevent business downtime",
@@ -549,50 +549,7 @@ const defaultStaticConfig: ClientConfig = {
       "metaDesc": "Discover the advanced technology of acoustic ultrasonic leak detection. Avoid structural destruction and pinpoint pipe failures surgically."
     }
   ],
-  "careers": [
-    {
-      "id": "diagnostic-technician",
-      "title": "Lead Ultrasonic Diagnostic Plumber",
-      "department": "Field Operations",
-      "location": "Palo Alto, CA",
-      "type": "Full-time",
-      "salaryRange": "$95,000 - $130,000 / year + commissions",
-      "description": "We are seeking an experienced Leak Detection Specialist skilled in operating acoustic microphones, infrared heat cameras, and tracer gas rigs. This role represents the elite tier of our diagnostic dispatch team.",
-      "requirements": [
-        "Minimum of 5 years of licensed residential plumbing experience",
-        "Valid CA C-36 license or equivalent Journeyman certificate",
-        "Proven expertise with FLIR thermal cameras and ultrasonic sensors",
-        "Clean driving record and passing background checks"
-      ],
-      "benefits": [
-        "Fully paid medical, dental, and vision insurance premiums",
-        "Brand-new, take-home fully equipped Mercedes Sprinter tech-van",
-        "State-of-the-art diagnostic equipment supplied at zero cost to you",
-        "401(k) retirement matching up to 5% with immediate vesting"
-      ]
-    },
-    {
-      "id": "service-technician",
-      "title": "Commercial Hydraulic Specialist",
-      "department": "Commercial Division",
-      "location": "Silicon Valley Area",
-      "type": "Full-time",
-      "salaryRange": "$105,000 - $145,000 / year",
-      "description": "Vortex Flow is expanding its commercial contract division. We need a Master Plumber capable of managing high-flow booster pumps, multi-story sanitary line stacks, and commercial backflow prevention loops.",
-      "requirements": [
-        "8+ years in commercial construction or facility plumbing maintenance",
-        "Active California AWWA Backflow Tester certification is mandatory",
-        "Expert reading of dynamic architectural water blueprints",
-        "Strong leadership skills to supervise junior apprentices"
-      ],
-      "benefits": [
-        "Premium salary packages with structured annual raises",
-        "Flexible schedules with primary weekday operations",
-        "Professional tool allowance and ongoing education sponsorships",
-        "Profit-sharing and performance milestone bonuses"
-      ]
-    }
-  ],
+  "careers": [],
   "testimonials": [
     {
       "id": "t-1",
@@ -703,9 +660,9 @@ const defaultStaticConfig: ClientConfig = {
     },
     "about": {
       "story": {
-        "title": "Engineering Pristine Flows Since 2018",
+        "title": "Engineering Pristine Flows Since 2022",
         "paragraphs": [
-          "Vortex Flow & Plumbing was founded in Palo Alto with a single mission: to elevate the home service experience to the highest standards of professional engineering. Traditional plumbing has been riddled with vague quotes, messy excavations, and reactive, short-term fixes. We envisioned a different path—one driven by micro-acoustic sensors, thermal diagnostics, and non-destructive repairs.",
+          "Bonventure Plumber was founded in NAirobi with a single mission: to elevate the home service experience to the highest standards of professional engineering. Traditional plumbing has been riddled with vague quotes, messy excavations, and reactive, short-term fixes. We envisioned a different path—one driven by micro-acoustic sensors, thermal diagnostics, and non-destructive repairs.",
           "Over the past eight years, we have grown into one of Silicon Valleys most decorated plumbing contractors. We invest heavily in training our technicians in advanced ultrasonic slab scanning and cured-in-place pipe (CIPP) lining technology, enabling us to preserve mature trees, paved driveways, and historical building structures for our clients.",
           "Today, our rolling smart vans act as mobile engineering hubs, ready to deliver residential restorations and commercial hydraulic overhauls. We combine top-tier software scheduling, GPS routing, and absolute transparency in pricing to respect your home, your time, and your budget."
         ],
@@ -753,7 +710,7 @@ const defaultStaticConfig: ClientConfig = {
     },
     "careersPage": {
       "header": "Join the Vanguard of Hydraulic Engineering",
-      "subHeader": "At Vortex Flow, we treat plumbing as an engineering discipline. Work with advanced thermal imaging cameras, ultrasonic diagnostic sensors, and state-of-the-art trenchless liners.",
+      "subHeader": "At Bonventure Plumber, we treat plumbing as an engineering discipline. Work with advanced thermal imaging cameras, ultrasonic diagnostic sensors, and state-of-the-art trenchless liners.",
       "benefitsTitle": "Industry-Defining Compensation & Support",
       "benefits": [
         {
@@ -776,10 +733,10 @@ const defaultStaticConfig: ClientConfig = {
   },
   "aiAssistant": {
     "enabled": true,
-    "botName": "Vortex Gemini AI",
+    "botName": "Bonventure Digital Assistance ",
     "personalityTitle": "Lead Diagnostic Intelligence",
-    "welcomeMessage": "Hi there! I am Vortex Gemini, your intelligent diagnostic plumbing assistant. How can I help you analyze a leak, check service rates, or optimize your plumbing flow today? 💧",
-    "fallbackResponse": "💡 That sounds like a specialized job for our master field engineers! I recommend calling our diagnostic dispatcher directly at (650) 555-FLOW for an immediate booking, or let me know if you would like to discuss our 50-year CIPP sewer liner warranty or run our dynamic cost estimator!",
+    "welcomeMessage": "Hi there! I am Bonventure Digital Assistance, your intelligent diagnostic plumbing assistant. How can I help you analyze a leak, check service rates, or optimize your plumbing flow today? 💧",
+    "fallbackResponse": "💡 That sounds like a specialized job for our master field engineers! I recommend calling our diagnostic dispatcher directly at +254 790n967718 for an immediate booking, or let me know if you would like to discuss our 50-year CIPP sewer liner warranty or run our dynamic cost estimator!",
     "knowledgeBase": [
       {
         "keywords": [

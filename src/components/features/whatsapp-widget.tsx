@@ -175,7 +175,9 @@ export function WhatsappWidget() {
   const handleLaunchWhatsApp = () => {
     const message = `Hello ${clientConfig.meta.name}! I would like to schedule a plumbing diagnostic scan or check service rates.`;
     const encoded = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${clientConfig.meta.phoneRaw}?text=${encoded}`;
+    // Sanitize the phone number to only contain digits as required by wa.me
+    const cleanPhone = clientConfig.meta.phoneRaw.replace(/\D/g, '');
+    const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encoded}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -256,7 +258,7 @@ export function WhatsappWidget() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xs font-bold leading-tight flex items-center gap-1">
-                  {botConfig.botName} <Badge variant="primary" className="text-[8px] px-1 py-0.5 leading-none h-auto bg-white/10 border-white/10">Gemini-Assist</Badge>
+                  {botConfig.botName} <Badge variant="primary" className="text-[8px] px-1 py-0.5 leading-none h-auto bg-white/10 border-white/10">Bonny-Assist</Badge>
                 </span>
                 <span className="text-[10px] text-neutral-300">{botConfig.personalityTitle}</span>
               </div>
